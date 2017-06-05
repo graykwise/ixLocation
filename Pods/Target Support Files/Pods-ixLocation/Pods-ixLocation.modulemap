@@ -1,0 +1,6 @@
+framework module Pods_ixLocation {
+  umbrella header "Pods-ixLocation-umbrella.h"
+
+  export *
+  module * { export * }
+}
