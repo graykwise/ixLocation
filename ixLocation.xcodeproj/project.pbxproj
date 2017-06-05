@@ -7,23 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC944D911EE56F8600C7A0E2 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC944D901EE56F8600C7A0E2 /* AddActivityViewController.swift */; };
+		BC944D931EE5701500C7A0E2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC944D921EE5701500C7A0E2 /* SettingsViewController.swift */; };
 		BCFC953A1EE5423600EDEB03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC95391EE5423600EDEB03 /* AppDelegate.swift */; };
-		BCFC953C1EE5423600EDEB03 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC953B1EE5423600EDEB03 /* FirstViewController.swift */; };
-		BCFC953E1EE5423600EDEB03 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC953D1EE5423600EDEB03 /* SecondViewController.swift */; };
+		BCFC953C1EE5423600EDEB03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC953B1EE5423600EDEB03 /* MapViewController.swift */; };
+		BCFC953E1EE5423600EDEB03 /* ActivityLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC953D1EE5423600EDEB03 /* ActivityLogViewController.swift */; };
 		BCFC95411EE5423600EDEB03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC953F1EE5423600EDEB03 /* Main.storyboard */; };
 		BCFC95431EE5423600EDEB03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFC95421EE5423600EDEB03 /* Assets.xcassets */; };
 		BCFC95461EE5423600EDEB03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC95441EE5423600EDEB03 /* LaunchScreen.storyboard */; };
+		FAB58C309311D107AF59CDA1 /* Pods_ixLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4456B8FC86EFFAAFBD1ED05F /* Pods_ixLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4456B8FC86EFFAAFBD1ED05F /* Pods_ixLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ixLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B15574BDACA3EEA88E7EB227 /* Pods-ixLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ixLocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation.release.xcconfig"; sourceTree = "<group>"; };
+		BC944D901EE56F8600C7A0E2 /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
+		BC944D921EE5701500C7A0E2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		BCFC95361EE5423600EDEB03 /* ixLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ixLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFC95391EE5423600EDEB03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCFC953B1EE5423600EDEB03 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		BCFC953D1EE5423600EDEB03 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		BCFC953B1EE5423600EDEB03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		BCFC953D1EE5423600EDEB03 /* ActivityLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLogViewController.swift; sourceTree = "<group>"; };
 		BCFC95401EE5423600EDEB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCFC95421EE5423600EDEB03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCFC95451EE5423600EDEB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCFC95471EE5423600EDEB03 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBAB170FCCE9193979E3CA4B /* Pods-ixLocation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ixLocation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB58C309311D107AF59CDA1 /* Pods_ixLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		579AE3D574675029498BB30A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4456B8FC86EFFAAFBD1ED05F /* Pods_ixLocation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6F2E303A24DB317CCDFAB0D6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBAB170FCCE9193979E3CA4B /* Pods-ixLocation.debug.xcconfig */,
+				B15574BDACA3EEA88E7EB227 /* Pods-ixLocation.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BCFC952D1EE5423600EDEB03 = {
 			isa = PBXGroup;
 			children = (
 				BCFC95381EE5423600EDEB03 /* ixLocation */,
 				BCFC95371EE5423600EDEB03 /* Products */,
+				6F2E303A24DB317CCDFAB0D6 /* Pods */,
+				579AE3D574675029498BB30A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -57,9 +85,11 @@
 			isa = PBXGroup;
 			children = (
 				BCFC95391EE5423600EDEB03 /* AppDelegate.swift */,
-				BCFC953B1EE5423600EDEB03 /* FirstViewController.swift */,
-				BCFC953D1EE5423600EDEB03 /* SecondViewController.swift */,
+				BCFC953B1EE5423600EDEB03 /* MapViewController.swift */,
+				BCFC953D1EE5423600EDEB03 /* ActivityLogViewController.swift */,
 				BCFC953F1EE5423600EDEB03 /* Main.storyboard */,
+				BC944D921EE5701500C7A0E2 /* SettingsViewController.swift */,
+				BC944D901EE56F8600C7A0E2 /* AddActivityViewController.swift */,
 				BCFC95421EE5423600EDEB03 /* Assets.xcassets */,
 				BCFC95441EE5423600EDEB03 /* LaunchScreen.storyboard */,
 				BCFC95471EE5423600EDEB03 /* Info.plist */,
@@ -74,9 +104,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BCFC954A1EE5423600EDEB03 /* Build configuration list for PBXNativeTarget "ixLocation" */;
 			buildPhases = (
+				D4C49024463D1EFEE31866EA /* [CP] Check Pods Manifest.lock */,
 				BCFC95321EE5423600EDEB03 /* Sources */,
 				BCFC95331EE5423600EDEB03 /* Frameworks */,
 				BCFC95341EE5423600EDEB03 /* Resources */,
+				CD2F86AAABE1D0BFC8DC3991 /* [CP] Embed Pods Frameworks */,
+				EDC2E30787D937313B1BB75D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -135,14 +168,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		CD2F86AAABE1D0BFC8DC3991 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C49024463D1EFEE31866EA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EDC2E30787D937313B1BB75D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BCFC95321EE5423600EDEB03 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCFC953E1EE5423600EDEB03 /* SecondViewController.swift in Sources */,
+				BCFC953E1EE5423600EDEB03 /* ActivityLogViewController.swift in Sources */,
 				BCFC953A1EE5423600EDEB03 /* AppDelegate.swift in Sources */,
-				BCFC953C1EE5423600EDEB03 /* FirstViewController.swift in Sources */,
+				BCFC953C1EE5423600EDEB03 /* MapViewController.swift in Sources */,
+				BC944D931EE5701500C7A0E2 /* SettingsViewController.swift in Sources */,
+				BC944D911EE56F8600C7A0E2 /* AddActivityViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,6 +348,7 @@
 		};
 		BCFC954B1EE5423600EDEB03 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBAB170FCCE9193979E3CA4B /* Pods-ixLocation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 74N7J3GY24;
@@ -278,6 +362,7 @@
 		};
 		BCFC954C1EE5423600EDEB03 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B15574BDACA3EEA88E7EB227 /* Pods-ixLocation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 74N7J3GY24;
@@ -308,6 +393,7 @@
 				BCFC954C1EE5423600EDEB03 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
