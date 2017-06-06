@@ -36,7 +36,7 @@ class SettingsTableViewController: UITableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return 4
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -71,6 +71,21 @@ class SettingsTableViewController: UITableViewController {
         
     }
     
+    
+    @IBAction func changePinColor(_ sender: UISegmentedControl) {
+        if (sender.selectedSegmentIndex == 0){
+            print("red")
+            UserDefaults.standard.set("red", forKey: "color")
+        }
+        if (sender.selectedSegmentIndex == 1){
+            print("blue")
+            UserDefaults.standard.set("blue", forKey: "color")
+        }
+        if (sender.selectedSegmentIndex == 2){
+            print("green")
+            UserDefaults.standard.set("green", forKey: "color")
+        }
+    }
     /*
     // MARK: - Navigation
 

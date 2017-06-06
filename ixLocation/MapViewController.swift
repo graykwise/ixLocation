@@ -19,6 +19,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //apple mapkit
+        map.delegate = self
+        map.showsPointsOfInterest = true
         locationManager = CLLocationManager()
         locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -31,7 +33,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
         
         setMapType()
-
     }
     
     
@@ -100,6 +101,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
             
         }
     }
+
     
     func didSaveActivity(activity: Activity) {
         print(activity)
@@ -107,13 +109,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         annotation.coordinate = CLLocationCoordinate2DMake(activity.location.lat, activity.location.long);
         annotation.title = activity.name
         map.addAnnotation(annotation)
-
     }
     
     func didCancelActivity() {
         
     }
 
-
 }
-

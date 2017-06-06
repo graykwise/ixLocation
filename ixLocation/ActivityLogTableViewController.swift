@@ -54,7 +54,6 @@ class ActivityLogTableViewController: UITableViewController, AddActivityDelegate
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "addActivity"){
             let activityWithCurrentLocation = Activity()
-            
             let navigationController = segue.destination as! UINavigationController
             let addActivityViewController = navigationController.topViewController as! AddActivityViewController
             addActivityViewController.delegate = self

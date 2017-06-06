@@ -252,6 +252,36 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+                            <tableViewSection headerTitle="Pin Color" id="WUi-yY-3ce">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="0.0" rowHeight="97" id="Gpn-WC-EMX">
+                                        <rect key="frame" x="0.0" y="457" width="375" height="97"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gpn-WC-EMX" id="sAE-ci-Vu3">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="96.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="YJB-Xu-xSU">
+                                                    <rect key="frame" x="72" y="34.5" width="230" height="29"/>
+                                                    <segments>
+                                                        <segment title="Red"/>
+                                                        <segment title="Blue"/>
+                                                        <segment title="Green"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="changePinColor:" destination="jWZ-v3-INm" eventType="valueChanged" id="t1I-7z-LWN"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YJB-Xu-xSU" firstAttribute="leading" secondItem="sAE-ci-Vu3" secondAttribute="leadingMargin" constant="64" id="Eif-nr-MDA"/>
+                                                <constraint firstItem="YJB-Xu-xSU" firstAttribute="centerY" secondItem="sAE-ci-Vu3" secondAttribute="centerY" id="HeA-RV-U7C"/>
+                                                <constraint firstItem="YJB-Xu-xSU" firstAttribute="centerX" secondItem="sAE-ci-Vu3" secondAttribute="centerX" id="dyQ-z6-Rnv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
                         </sections>
                         <connections>
                             <outlet property="dataSource" destination="jWZ-v3-INm" id="nGp-XJ-468"/>
@@ -517,6 +547,6 @@
         <image name="settings" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MDk-J5-3dQ"/>
+        <segue reference="XIq-zd-LZ0"/>
     </inferredMetricsTieBreakers>
 </document>
