@@ -8,10 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		BC944D911EE56F8600C7A0E2 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC944D901EE56F8600C7A0E2 /* AddActivityViewController.swift */; };
-		BC944D931EE5701500C7A0E2 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC944D921EE5701500C7A0E2 /* SettingsViewController.swift */; };
+		BC944D931EE5701500C7A0E2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC944D921EE5701500C7A0E2 /* SettingsTableViewController.swift */; };
+		BCD96CE01EE6C4E800715119 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD96CDF1EE6C4E800715119 /* Activity.swift */; };
+		BCD96CE21EE6C57700715119 /* AddActivityDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD96CE11EE6C57700715119 /* AddActivityDelegate.swift */; };
+		BCD96CE41EE6DD7A00715119 /* Pins.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD96CE31EE6DD7A00715119 /* Pins.swift */; };
+		BCD96CE61EE6F85F00715119 /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD96CE51EE6F85F00715119 /* EditProfileViewController.swift */; };
 		BCFC953A1EE5423600EDEB03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC95391EE5423600EDEB03 /* AppDelegate.swift */; };
 		BCFC953C1EE5423600EDEB03 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC953B1EE5423600EDEB03 /* MapViewController.swift */; };
-		BCFC953E1EE5423600EDEB03 /* ActivityLogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC953D1EE5423600EDEB03 /* ActivityLogViewController.swift */; };
+		BCFC953E1EE5423600EDEB03 /* ActivityLogTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCFC953D1EE5423600EDEB03 /* ActivityLogTableViewController.swift */; };
 		BCFC95411EE5423600EDEB03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC953F1EE5423600EDEB03 /* Main.storyboard */; };
 		BCFC95431EE5423600EDEB03 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCFC95421EE5423600EDEB03 /* Assets.xcassets */; };
 		BCFC95461EE5423600EDEB03 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCFC95441EE5423600EDEB03 /* LaunchScreen.storyboard */; };
@@ -22,11 +26,15 @@
 		4456B8FC86EFFAAFBD1ED05F /* Pods_ixLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ixLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15574BDACA3EEA88E7EB227 /* Pods-ixLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ixLocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation.release.xcconfig"; sourceTree = "<group>"; };
 		BC944D901EE56F8600C7A0E2 /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
-		BC944D921EE5701500C7A0E2 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		BC944D921EE5701500C7A0E2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		BCD96CDF1EE6C4E800715119 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
+		BCD96CE11EE6C57700715119 /* AddActivityDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityDelegate.swift; sourceTree = "<group>"; };
+		BCD96CE31EE6DD7A00715119 /* Pins.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pins.swift; sourceTree = "<group>"; };
+		BCD96CE51EE6F85F00715119 /* EditProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		BCFC95361EE5423600EDEB03 /* ixLocation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ixLocation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCFC95391EE5423600EDEB03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCFC953B1EE5423600EDEB03 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		BCFC953D1EE5423600EDEB03 /* ActivityLogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLogViewController.swift; sourceTree = "<group>"; };
+		BCFC953D1EE5423600EDEB03 /* ActivityLogTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityLogTableViewController.swift; sourceTree = "<group>"; };
 		BCFC95401EE5423600EDEB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BCFC95421EE5423600EDEB03 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCFC95451EE5423600EDEB03 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -86,10 +94,14 @@
 			children = (
 				BCFC95391EE5423600EDEB03 /* AppDelegate.swift */,
 				BCFC953B1EE5423600EDEB03 /* MapViewController.swift */,
-				BCFC953D1EE5423600EDEB03 /* ActivityLogViewController.swift */,
+				BCFC953D1EE5423600EDEB03 /* ActivityLogTableViewController.swift */,
 				BCFC953F1EE5423600EDEB03 /* Main.storyboard */,
-				BC944D921EE5701500C7A0E2 /* SettingsViewController.swift */,
+				BCD96CE51EE6F85F00715119 /* EditProfileViewController.swift */,
+				BC944D921EE5701500C7A0E2 /* SettingsTableViewController.swift */,
+				BCD96CDF1EE6C4E800715119 /* Activity.swift */,
+				BCD96CE11EE6C57700715119 /* AddActivityDelegate.swift */,
 				BC944D901EE56F8600C7A0E2 /* AddActivityViewController.swift */,
+				BCD96CE31EE6DD7A00715119 /* Pins.swift */,
 				BCFC95421EE5423600EDEB03 /* Assets.xcassets */,
 				BCFC95441EE5423600EDEB03 /* LaunchScreen.storyboard */,
 				BCFC95471EE5423600EDEB03 /* Info.plist */,
@@ -221,11 +233,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BCFC953E1EE5423600EDEB03 /* ActivityLogViewController.swift in Sources */,
+				BCD96CE01EE6C4E800715119 /* Activity.swift in Sources */,
+				BCD96CE21EE6C57700715119 /* AddActivityDelegate.swift in Sources */,
+				BCFC953E1EE5423600EDEB03 /* ActivityLogTableViewController.swift in Sources */,
 				BCFC953A1EE5423600EDEB03 /* AppDelegate.swift in Sources */,
 				BCFC953C1EE5423600EDEB03 /* MapViewController.swift in Sources */,
-				BC944D931EE5701500C7A0E2 /* SettingsViewController.swift in Sources */,
+				BC944D931EE5701500C7A0E2 /* SettingsTableViewController.swift in Sources */,
 				BC944D911EE56F8600C7A0E2 /* AddActivityViewController.swift in Sources */,
+				BCD96CE41EE6DD7A00715119 /* Pins.swift in Sources */,
+				BCD96CE61EE6F85F00715119 /* EditProfileViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import UIKit
 import MapKit
 
-class MapViewController: UIViewController, CLLocationManagerDelegate {
+class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, AddActivityDelegate {
 
     @IBOutlet weak var map: MKMapView!
     var locationManager: CLLocationManager!
@@ -24,10 +24,19 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         locationManager.requestAlwaysAuthorization()
         //locationManager.requestWhenInUseAuthorization()
+        map.showsUserLocation = true
         
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
+        
+        setMapType()
+
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setMapType()
     }
 
     override func didReceiveMemoryWarning() {
@@ -57,5 +66,54 @@ class MapViewController: UIViewController, CLLocationManagerDelegate {
         // An error occurred trying to retrieve users location
         print("Error \(error)")
     }
+    
+    func setMapType(){
+        let mapType = UserDefaults.standard.string(forKey: "mapKey")
+        
+        if mapType != nil {
+            if mapType == "hybrid"{
+                map.mapType = .hybrid
+            }
+            if mapType == "satellite"{
+                map.mapType = .satellite
+            }
+            if mapType == "standard"{
+                map.mapType = .standard
+            }
+        }
+        else{
+            map.mapType = .standard
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if(segue.identifier == "addActivity"){
+                let pinPoint = Pins(lat: currentUserLocation.coordinate.latitude, long: currentUserLocation.coordinate.longitude)
+                let activityWithCurrentLocation = Activity()
+                activityWithCurrentLocation?.location = pinPoint
+                
+                let navigationController = segue.destination as! UINavigationController
+                let addActivityViewController = navigationController.topViewController as! AddActivityViewController
+                addActivityViewController.delegate = self
+                addActivityViewController.newActivity = activityWithCurrentLocation
+            
+            
+        }
+    }
+    
+    func didSaveActivity(activity: Activity) {
+        print(activity)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = CLLocationCoordinate2DMake(activity.location.lat, activity.location.long);
+        annotation.title = activity.name
+        map.addAnnotation(annotation)
+
+    }
+    
+    func didCancelActivity() {
+        
+    }
+
+
 }
 

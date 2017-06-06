@@ -10,6 +10,13 @@ import UIKit
 
 class AddActivityViewController: UIViewController {
 
+    @IBOutlet weak var nameTextField: UITextField!
+    
+    @IBOutlet weak var descriptionText: UITextView!
+    
+    var delegate: AddActivityDelegate?
+    var newActivity: Activity?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +28,28 @@ class AddActivityViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func cancel(_ sender: UIBarButtonItem) {
+        delegate?.didCancelActivity()
+        dismiss(animated: true, completion: nil)
+    }
+    
 
+    @IBAction func saveActivity(_ sender: UIBarButtonItem) {
+        
+        if(nameTextField.text != "" && descriptionText.text != ""){
+        newActivity?.name = nameTextField.text!
+        newActivity?.description = descriptionText.text
+        delegate?.didSaveActivity(activity: newActivity!)
+        dismiss(animated: true, completion: nil)
+        }
+        else{
+            let alert = UIAlertController(title: "Alert", message: "Please Fill Out All Fields", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            
+            alert.addAction(cancelAction)
+            present(alert, animated: true)
+        }
+    }
     /*
     // MARK: - Navigation
 
