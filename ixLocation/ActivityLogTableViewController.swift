@@ -26,8 +26,8 @@ class ActivityLogTableViewController: UITableViewController, AddActivityDelegate
         activities.append(activity2!)
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
