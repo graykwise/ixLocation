@@ -31,7 +31,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
-        
+        let span = MKCoordinateSpanMake(0.5, 0.5)
+        let location = CLLocationCoordinate2D(latitude: -33.918861,longitude: 18.423300)
+        let region = MKCoordinateRegion(center: location, span: span)
+        map.setRegion(region, animated: true)
+        map.showsPointsOfInterest = true
+        map.isZoomEnabled = true
         setMapType()
     }
     
@@ -50,14 +55,10 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         
         // Get the users location from the array of locations
         let userLocation: CLLocation = locations[0] as CLLocation
-        
-        // You can call stopUpdatingLocation() to stop listening for location updates
-        // manager.stopUpdatingLocation()
+
         
         print("user latitude = \(userLocation.coordinate.latitude)")
         print("user longitude = \(userLocation.coordinate.longitude)")
-        
-        // Store reference to the users location in the class instance (self)
         
         self.currentUserLocation = userLocation
     }

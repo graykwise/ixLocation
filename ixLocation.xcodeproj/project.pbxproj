@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC85BB261EE7ED4B0040E4EF /* ActivityDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85BB251EE7ED4B0040E4EF /* ActivityDetailViewController.swift */; };
 		BC944D911EE56F8600C7A0E2 /* AddActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC944D901EE56F8600C7A0E2 /* AddActivityViewController.swift */; };
 		BC944D931EE5701500C7A0E2 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC944D921EE5701500C7A0E2 /* SettingsTableViewController.swift */; };
 		BCD96CE01EE6C4E800715119 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCD96CDF1EE6C4E800715119 /* Activity.swift */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		4456B8FC86EFFAAFBD1ED05F /* Pods_ixLocation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ixLocation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B15574BDACA3EEA88E7EB227 /* Pods-ixLocation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ixLocation.release.xcconfig"; path = "Pods/Target Support Files/Pods-ixLocation/Pods-ixLocation.release.xcconfig"; sourceTree = "<group>"; };
+		BC85BB251EE7ED4B0040E4EF /* ActivityDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityDetailViewController.swift; sourceTree = "<group>"; };
 		BC944D901EE56F8600C7A0E2 /* AddActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddActivityViewController.swift; sourceTree = "<group>"; };
 		BC944D921EE5701500C7A0E2 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		BCD96CDF1EE6C4E800715119 /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
@@ -96,6 +98,7 @@
 				BCFC953B1EE5423600EDEB03 /* MapViewController.swift */,
 				BCFC953D1EE5423600EDEB03 /* ActivityLogTableViewController.swift */,
 				BCFC953F1EE5423600EDEB03 /* Main.storyboard */,
+				BC85BB251EE7ED4B0040E4EF /* ActivityDetailViewController.swift */,
 				BCD96CE51EE6F85F00715119 /* EditProfileViewController.swift */,
 				BC944D921EE5701500C7A0E2 /* SettingsTableViewController.swift */,
 				BCD96CDF1EE6C4E800715119 /* Activity.swift */,
@@ -233,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC85BB261EE7ED4B0040E4EF /* ActivityDetailViewController.swift in Sources */,
 				BCD96CE01EE6C4E800715119 /* Activity.swift in Sources */,
 				BCD96CE21EE6C57700715119 /* AddActivityDelegate.swift in Sources */,
 				BCFC953E1EE5423600EDEB03 /* ActivityLogTableViewController.swift in Sources */,

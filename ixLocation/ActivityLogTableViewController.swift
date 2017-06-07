@@ -59,6 +59,12 @@ class ActivityLogTableViewController: UITableViewController, AddActivityDelegate
             addActivityViewController.delegate = self
             addActivityViewController.newActivity = activityWithCurrentLocation
         }
+        if segue.identifier == "navToActivityDetail"{
+            let activityDetailViewController = segue.destination as! ActivityDetailViewController
+            let cell = sender as! UITableViewCell
+            let path = self.tableView.indexPath(for: cell)
+            activityDetailViewController.activity = activities[(path?.row)!]
+        }
     }
     
     func didSaveActivity(activity: Activity) {
