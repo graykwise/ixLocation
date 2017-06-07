@@ -15,15 +15,6 @@ class ActivityLogTableViewController: UITableViewController, AddActivityDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let activity1 = Activity()
-        activity1?.name = "First"
-        activity1?.description = "First Activity"
-        activities.append(activity1!)
-        
-        let activity2 = Activity()
-        activity2?.name = "Second"
-        activity2?.description = "Second Activity"
-        activities.append(activity2!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -69,6 +60,7 @@ class ActivityLogTableViewController: UITableViewController, AddActivityDelegate
     
     func didSaveActivity(activity: Activity) {
         activities.append(activity)
+        activities.sort { $0.name < $1.name }
     }
     
     func didCancelActivity() {

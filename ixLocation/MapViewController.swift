@@ -98,11 +98,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                 let addActivityViewController = navigationController.topViewController as! AddActivityViewController
                 addActivityViewController.delegate = self
                 addActivityViewController.newActivity = activityWithCurrentLocation
-            
-            
         }
     }
-
     
     func didSaveActivity(activity: Activity) {
         print(activity)
