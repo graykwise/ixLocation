@@ -76,7 +76,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kzf-Kb-GTS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="placeholder" selectedImage="placeholder" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Re-V4-utv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Re-V4-utv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -95,7 +95,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iWL-ZY-fub" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="settings" selectedImage="settings" id="poG-mB-Krt" userLabel="Third"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="owW-CW-JTg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="owW-CW-JTg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -291,6 +291,7 @@
                     <navigationItem key="navigationItem" title="Settings" id="ifq-RP-Ggm"/>
                     <connections>
                         <outlet property="name" destination="yeZ-Zh-bkp" id="qdo-vZ-0ya"/>
+                        <outlet property="pinColorSelector" destination="YJB-Xu-xSU" id="DYK-ph-3mh"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iab-b6-1bT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -535,7 +536,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="77o-ZQ-Hb9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="note" selectedImage="note" id="WWx-Me-z7G"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xHs-ov-acw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xHs-ov-acw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -553,7 +554,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WGX-IP-92e" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="weW-Gu-t5V">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="weW-Gu-t5V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -571,7 +572,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dlF-4l-muP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8Wh-wC-4z0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Wh-wC-4z0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>

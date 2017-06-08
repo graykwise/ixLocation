@@ -12,9 +12,9 @@ class SettingsTableViewController: UITableViewController {
 
     @IBOutlet weak var name: UILabel!
     
+    @IBOutlet weak var pinColorSelector: UISegmentedControl!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         // Do any additional setup after loading the view.
     }

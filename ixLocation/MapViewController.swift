@@ -16,10 +16,12 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     var currentUserLocation: CLLocation!
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //apple mapkit
         map.delegate = self
+        UserDefaults.standard.set("red", forKey: "color")
         map.showsPointsOfInterest = true
         locationManager = CLLocationManager()
         locationManager.delegate = self
@@ -31,7 +33,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         if CLLocationManager.locationServicesEnabled() {
             locationManager.startUpdatingLocation()
         }
-        let span = MKCoordinateSpanMake(0.5, 0.5)
+        let span = MKCoordinateSpanMake(5, 5)
         let location = CLLocationCoordinate2D(latitude: -33.918861,longitude: 18.423300)
         let region = MKCoordinateRegion(center: location, span: span)
         map.setRegion(region, animated: true)
@@ -88,8 +90,38 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    
+        if(annotation.isMember(of: MKPointAnnotation.self)){
+            
+        let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myView")
+        pinView.pinTintColor = setPinColor()
+        pinView.animatesDrop = true
+        return pinView
+        }
+        else{
+            return nil
+        }
+    
+    }
+    
+    func setPinColor() -> UIColor {
+        
+        if UserDefaults.standard.string(forKey: "color") == "green" {
+            return .green
+        }
+        
+        else if UserDefaults.standard.string(forKey: "color") == "blue"{
+            return .blue
+        }
+        else{
+            return .red
+        }
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "addActivity"){
+            
                 let pinPoint = Pins(lat: currentUserLocation.coordinate.latitude, long: currentUserLocation.coordinate.longitude)
                 let activityWithCurrentLocation = Activity()
                 activityWithCurrentLocation?.location = pinPoint
@@ -106,6 +138,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         let annotation = MKPointAnnotation()
         annotation.coordinate = CLLocationCoordinate2DMake(activity.location.lat, activity.location.long);
         annotation.title = activity.name
+        map.showsUserLocation = true
         map.addAnnotation(annotation)
     }
     
