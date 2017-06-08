@@ -7,5 +7,6 @@ target 'ixLocation' do
 
   # Pods for ixLocation
   pod ‘GoogleMaps’, ‘= 2.3.0’
-
+  pod 'Alamofire', '~> 4.4'
+  pod 'Gloss', '~> 1.2'
 end

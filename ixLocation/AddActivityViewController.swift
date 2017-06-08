@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class AddActivityViewController: UIViewController {
 
@@ -37,10 +38,20 @@ class AddActivityViewController: UIViewController {
     @IBAction func saveActivity(_ sender: UIBarButtonItem) {
         
         if(nameTextField.text != "" && descriptionText.text != ""){
+            
         newActivity?.name = nameTextField.text!
         newActivity?.description = descriptionText.text
-        delegate?.didSaveActivity(activity: newActivity!)
-        dismiss(animated: true, completion: nil)
+            
+        Alamofire.request("https://ixlocation-b31d5.firebaseio.com/activities.json", method: .post, parameters: newActivity?.toJSON(), encoding: JSONEncoding.default).responseJSON { response in
+            
+            switch response.result {
+            case .success(let _):
+                self.delegate?.didSaveActivity(activity: self.newActivity!)
+                self.dismiss(animated: true, completion: nil)
+            case .failure: break
+                // Failure... handle error
+            }
+            }
         }
         else{
             let alert = UIAlertController(title: "Alert", message: "Please Fill Out All Fields", preferredStyle: .alert)

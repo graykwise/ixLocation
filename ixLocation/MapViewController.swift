@@ -8,16 +8,51 @@
 
 import UIKit
 import MapKit
+import Alamofire
 
 class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate, AddActivityDelegate {
 
     @IBOutlet weak var map: MKMapView!
     var locationManager: CLLocationManager!
     var currentUserLocation: CLLocation!
+    var activities: [Activity] = []
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        Alamofire.request("https://ixlocation-b31d5.firebaseio.com/activities.json").responseJSON {
+            response in
+            if let JSON = response.result.value {
+                let response = JSON as! NSDictionary
+                
+                for (key, value) in response{
+                    let activity = Activity()
+                    
+                    if let actDictionary = value as? [String: AnyObject]{
+                        activity?.name = actDictionary["name"] as! String
+                        activity?.description = actDictionary["description"] as! String
+                        
+                        if let geoPointDictionary = actDictionary["location"] as? [String: AnyObject] {
+                            let location = Pins()
+                            location.lat = (geoPointDictionary["lat"] as? Double)!
+                            location.long = (geoPointDictionary["long"] as? Double)!
+                            activity?.location = location
+                            
+                            let annotation = MKPointAnnotation()
+                            annotation.coordinate = CLLocationCoordinate2DMake((activity?.location.lat)!, (activity?.location.long)!);
+                            annotation.title = activity?.name
+                            self.map.addAnnotation(annotation)
+                        }
+                    }
+                    
+                    self.activities.append(activity!)
+                }
+                
+            }
+        }
+
+        
         // Do any additional setup after loading the view, typically from a nib.
         //apple mapkit
         map.delegate = self
@@ -92,12 +127,14 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
     
+        let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myView")
+        pinView.animatesDrop = true
+        
         if(annotation.isMember(of: MKPointAnnotation.self)){
             
-        let pinView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myView")
         pinView.pinTintColor = setPinColor()
-        pinView.animatesDrop = true
         return pinView
+            
         }
         else{
             return nil
@@ -136,9 +173,8 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     func didSaveActivity(activity: Activity) {
         print(activity)
         let annotation = MKPointAnnotation()
-        annotation.coordinate = CLLocationCoordinate2DMake(activity.location.lat, activity.location.long);
+        annotation.coordinate = CLLocationCoordinate2DMake((activity.location.lat), (activity.location.long));
         annotation.title = activity.name
-        map.showsUserLocation = true
         map.addAnnotation(annotation)
     }
     

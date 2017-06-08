@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class ActivityLogTableViewController: UITableViewController, AddActivityDelegate {
 
@@ -14,7 +15,32 @@ class ActivityLogTableViewController: UITableViewController, AddActivityDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        Alamofire.request("https://ixlocation-b31d5.firebaseio.com/activities.json").responseJSON {
+         response in
+            if let JSON = response.result.value {
+                let response = JSON as! NSDictionary
+                
+                for (key, value) in response{
+                    let activity = Activity()
+                    
+                    if let actDictionary = value as? [String: AnyObject]{
+                        activity?.name = actDictionary["name"] as! String
+                        activity?.description = actDictionary["description"] as! String
+                        
+                        if let geoPointDictionary = actDictionary["location"] as? [String: AnyObject] {
+                            let location = Pins()
+                            location.lat = (geoPointDictionary["lat"] as? Double)!
+                            location.long = (geoPointDictionary["long"] as? Double)!
+                            activity?.location = location
+                        }
+                    }
+                    self.activities.append(activity!)
+                }
+                
+                self.tableView.reloadData()
+                
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

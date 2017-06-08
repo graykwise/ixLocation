@@ -7,13 +7,31 @@
 //
 
 import Foundation
+import Gloss
 
-class Pins {
+class Pins: Decodable, Glossy {
     var lat: Double
     var long: Double
+    
+    init(){
+        self.lat = 0
+        self.long = 0
+    }
     
     init(lat: Double, long: Double) {
         self.lat = lat
         self.long = long
+    }
+    
+    required init?(json: JSON) {
+        self.lat = ("lat" <~~ json)!
+        self.long = ("long" <~~ json)!
+    }
+    
+    func toJSON() -> JSON? {
+        return jsonify([
+            "lat" ~~> self.lat,
+            "long" ~~> self.long
+            ])
     }
 }
