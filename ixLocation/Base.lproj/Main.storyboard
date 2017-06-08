@@ -36,7 +36,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Apple Map" id="J6a-74-8uR" userLabel="Apple Map">
-                        <barButtonItem key="rightBarButtonItem" image="plus" style="plain" id="teV-fG-E1H">
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="teV-fG-E1H">
                             <connections>
                                 <segue destination="WGX-IP-92e" kind="presentation" identifier="addActivity" id="XIq-zd-LZ0"/>
                             </connections>
@@ -76,7 +76,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kzf-Kb-GTS" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" image="placeholder" selectedImage="placeholder" id="acW-dT-cKf"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Re-V4-utv">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="3Re-V4-utv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -95,7 +95,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="iWL-ZY-fub" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="settings" selectedImage="settings" id="poG-mB-Krt" userLabel="Third"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="owW-CW-JTg">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="owW-CW-JTg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -322,14 +322,29 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Set Image" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTC-Df-bQb">
+                                <rect key="frame" x="16" y="147" width="77" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zRW-rV-XSb">
+                                <rect key="frame" x="67" y="186" width="240" height="240"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="MFw-qC-OxW" firstAttribute="leading" secondItem="IoD-k0-0hf" secondAttribute="leading" id="0VT-1l-VVf"/>
                             <constraint firstItem="MFw-qC-OxW" firstAttribute="leading" secondItem="Rbu-MS-Hqd" secondAttribute="leadingMargin" id="21k-Go-GMZ"/>
                             <constraint firstItem="IoD-k0-0hf" firstAttribute="trailing" secondItem="Rbu-MS-Hqd" secondAttribute="trailingMargin" id="56h-Xc-Xgh"/>
+                            <constraint firstItem="JTC-Df-bQb" firstAttribute="top" secondItem="IoD-k0-0hf" secondAttribute="bottom" constant="16" id="CCP-GP-OrH"/>
                             <constraint firstItem="IoD-k0-0hf" firstAttribute="top" secondItem="MFw-qC-OxW" secondAttribute="bottom" constant="8" symbolic="YES" id="FS9-AE-I9d"/>
                             <constraint firstItem="MFw-qC-OxW" firstAttribute="top" secondItem="t9B-ID-O8T" secondAttribute="bottom" constant="8" symbolic="YES" id="LRd-u3-zrJ"/>
+                            <constraint firstItem="zRW-rV-XSb" firstAttribute="centerX" secondItem="IoD-k0-0hf" secondAttribute="centerX" id="Pf0-iH-quF"/>
+                            <constraint firstItem="JTC-Df-bQb" firstAttribute="leading" secondItem="IoD-k0-0hf" secondAttribute="leading" id="W3K-6T-f4L"/>
+                            <constraint firstItem="zRW-rV-XSb" firstAttribute="top" secondItem="JTC-Df-bQb" secondAttribute="bottom" constant="18" id="XjK-to-7ru"/>
+                            <constraint firstItem="Yof-5r-UcZ" firstAttribute="top" secondItem="zRW-rV-XSb" secondAttribute="bottom" constant="241" id="Xy5-9L-d1l"/>
+                            <constraint firstItem="zRW-rV-XSb" firstAttribute="leading" secondItem="Rbu-MS-Hqd" secondAttribute="leadingMargin" constant="51" id="ddx-xJ-H1H"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Edit Profile" id="OqW-Vk-hVJ">
@@ -345,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMJ-6a-WR3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4012" y="1236"/>
+            <point key="canvasLocation" x="4012" y="1235.5322338830586"/>
         </scene>
         <!--Activity Log-->
         <scene sceneID="nh1-26-b4Z">
@@ -536,7 +551,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="77o-ZQ-Hb9" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="note" selectedImage="note" id="WWx-Me-z7G"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xHs-ov-acw">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="xHs-ov-acw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -554,7 +569,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WGX-IP-92e" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="weW-Gu-t5V">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="weW-Gu-t5V">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -572,7 +587,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dlF-4l-muP" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8Wh-wC-4z0">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="8Wh-wC-4z0">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -590,10 +605,9 @@
         <image name="note" width="24" height="24"/>
         <image name="pic" width="1200" height="1200"/>
         <image name="placeholder" width="24" height="24"/>
-        <image name="plus" width="24" height="24"/>
         <image name="settings" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="MDk-J5-3dQ"/>
+        <segue reference="XIq-zd-LZ0"/>
     </inferredMetricsTieBreakers>
 </document>

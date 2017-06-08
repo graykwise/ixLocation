@@ -48,7 +48,6 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
                     
                     self.activities.append(activity!)
                 }
-                
             }
         }
 
@@ -97,7 +96,16 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         print("user latitude = \(userLocation.coordinate.latitude)")
         print("user longitude = \(userLocation.coordinate.longitude)")
         
+        
         self.currentUserLocation = userLocation
+        
+        let span = MKCoordinateSpanMake(5, 5)
+        
+        
+        let location = CLLocationCoordinate2D(latitude: currentUserLocation.coordinate.latitude,longitude: currentUserLocation.coordinate.longitude)
+        let region = MKCoordinateRegion(center: location, span: span)
+        map.setRegion(region, animated: true)
+        //locationManager.stopUpdatingLocation()
     }
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error)
